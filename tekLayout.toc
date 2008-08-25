@@ -1,0 +1,9 @@
+## Interface: 30000
+
+## Title: tekLayout
+## Notes: My personal WorldFrame/ChatFrame layout
+## Author: Tekkub Stoutwrithe
+## X-Website: http://www.tekkub.net/
+## X-Email: tekkub-wow@googlegroups.com
+
+tekLayout.lua
