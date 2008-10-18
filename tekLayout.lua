@@ -63,6 +63,8 @@ f:SetScript("OnEvent", function()
 	SetupFrame(ChatFrame3, VSIZE/2 - GAP/2, HSIZE, 5, 70, 6, 91, "TOPLEFT", ChatFrame1, "TOPRIGHT", GAP, 0)
 	SetupFrame(ChatFrame4, VSIZE/2 - GAP/2, HSIZE, 81, 14, 68, 119, "TOPLEFT", ChatFrame3, "BOTTOMLEFT", 0, -GAP)
 	SetupFrame(ChatFrame6, VSIZE, HSIZE, 39, 65, 68, 112, "TOPLEFT", ChatFrame3, "TOPRIGHT", GAP, 0)
+	FCF_Close(ChatFrame5)
+	FCF_Close(ChatFrame7)
 	SetCVar("chatLocked", 1)
 
 
