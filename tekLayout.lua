@@ -1,5 +1,5 @@
 
-local SCALE, VSIZE, GAP = .85, 150, 6
+local SCALE, VSIZE, GAP = .88, 150, 6
 local HSIZE = (1680)*SCALE/3
 
 
