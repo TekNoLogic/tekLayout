@@ -1,6 +1,5 @@
 
 local SCALE, VSIZE, GAP = .88, 150, 6
-local HSIZE = (1680)*SCALE/3
 
 
 local groups = {
@@ -52,6 +51,8 @@ f:SetScript("OnEvent", function()
 	-- Seems Wrath likes to undo scale from time to time
 	SetCVar("useUiScale", 1)
 	SetCVar("UISCALE", SCALE)
+
+	local HSIZE = UIParent:GetWidth()/3-GAP
 
 
 	-- Hide those stupid dock thingies that show up on load for a moment
