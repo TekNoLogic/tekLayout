@@ -1,11 +1,11 @@
 
-local SCALE, VSIZE, GAP = .88, 150, 6
+local SCALE, VSIZE, GAP = .859999995470047, 150, 6 -- max scale: .87
 
 
 local groups = {
 	[ChatFrame1] = {"SYSTEM", "SYSTEM_NOMENU", "SAY", "EMOTE", "MONSTER_SAY", "MONSTER_YELL", "MONSTER_EMOTE", "MONSTER_WHISPER", "MONSTER_BOSS_EMOTE", "MONSTER_BOSS_WHISPER", "ERRORS", "CHANNEL", "ACHIEVEMENT"},
 	[ChatFrame3] = {"GUILD", "GUILD_OFFICER", "GUILD_ACHIEVEMENT"},
-	[ChatFrame4] = {"WHISPER", "AFK", "DND", "IGNORED", "PARTY", "RAID", "RAID_LEADER", "BG_HORDE", "BG_ALLIANCE", "BG_NEUTRAL", "BATTLEGROUND", "BATTLEGROUND_LEADER"},
+	[ChatFrame4] = {"WHISPER", "AFK", "DND", "IGNORED", "PARTY", "RAID", "RAID_LEADER", "BG_HORDE", "BG_ALLIANCE", "BG_NEUTRAL", "BATTLEGROUND", "BATTLEGROUND_LEADER", "RAID_WARNING"},
 	[ChatFrame6] = {"COMBAT_FACTION_CHANGE", "SKILL", "LOOT", "MONEY", "COMBAT_XP_GAIN", "COMBAT_HONOR_GAIN", "COMBAT_MISC_INFO"},
 }
 
@@ -35,11 +35,24 @@ local function SetupFrame(frame, h, w, r, g, b, a, ...)
 	frame:SetFont(font, 11, flags)
 	SetChatWindowSize(id, 11)
 
-	ChatFrame_RemoveAllChannels(frame)
+--~ 	ChatFrame_RemoveAllChannels(frame)
+--~ 	frame.channelList = {}
+--~ 	frame.zoneChannelList = {};
+	ChatFrame_RemoveChannel(frame, "General")
 	ChatFrame_RemoveAllMessageGroups(frame)
 	for i,v in pairs(groups[frame]) do ChatFrame_AddMessageGroup(frame, v) end
 end
 
+--~ local f = CreateFrame("Frame")
+--~ f:RegisterEvent("UPDATE_CHAT_WINDOWS")
+--~ f:SetScript("OnEvent", function()
+--~ 	f:UnregisterAllEvents()
+--~ 	print("HAI!")
+--~ 	ChatFrame3.channelList[1], ChatFrame3.zoneChannelList[1] = "GuildRecruitment", 25
+--~ 	ChatFrame_RegisterForChannels(ChatFrame3, "GuildRecruitment", 25)
+--~ 	ChatFrame_AddChannel(ChatFrame3, "GuildRecruitment")
+--~ 	ChatFrame_AddChannel(ChatFrame3, "Trade")
+--~ end)
 
 local f = CreateFrame("frame")
 f:RegisterEvent("PLAYER_LOGIN")
@@ -59,7 +72,7 @@ f:SetScript("OnEvent", function()
 	for i=1,7 do _G["ChatFrame"..i.."TabDockRegionHighlight"]:Hide() end
 
 
-	SetupFrame(ChatFrame1, VSIZE, HSIZE, 51, 51, 51, 107, "BOTTOMLEFT", UIParent, GAP/2, GAP)
+	SetupFrame(ChatFrame1, VSIZE, HSIZE, 51, 51, 51, 107, "BOTTOMLEFT", UIParent, GAP/2, GAP+3)
 	ChatFrame1.SetPoint = function() end -- Wrath build 8820 started resetting ChatFrame1's position.  This ensures it doesn't fuck with my layout.
 	SetupFrame(ChatFrame3, VSIZE/2 - GAP/2, HSIZE, 5, 70, 6, 91, "TOPLEFT", ChatFrame1, "TOPRIGHT", GAP, 0)
 	SetupFrame(ChatFrame4, VSIZE/2 - GAP/2, HSIZE, 81, 14, 68, 119, "TOPLEFT", ChatFrame3, "BOTTOMLEFT", 0, -GAP)
