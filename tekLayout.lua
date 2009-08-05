@@ -72,6 +72,10 @@ f:SetScript("OnEvent", function()
 	for i=1,7 do _G["ChatFrame"..i.."TabDockRegionHighlight"]:Hide() end
 
 
+	-- Force on raid coloring
+	for i,v in pairs(CHAT_CONFIG_CHAT_LEFT) do ToggleChatColorNamesByClassGroup(true, v.type) end
+
+
 	SetupFrame(ChatFrame1, VSIZE, HSIZE, 51, 51, 51, 107, "BOTTOMLEFT", UIParent, GAP/2, GAP+3)
 	ChatFrame1.SetPoint = function() end -- Wrath build 8820 started resetting ChatFrame1's position.  This ensures it doesn't fuck with my layout.
 	SetupFrame(ChatFrame3, VSIZE/2 - GAP/2, HSIZE, 5, 70, 6, 91, "TOPLEFT", ChatFrame1, "TOPRIGHT", GAP, 0)
