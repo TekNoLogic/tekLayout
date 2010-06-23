@@ -79,7 +79,11 @@ f:SetScript("OnEvent", function()
 	SetupFrame(ChatFrame6, VSIZE, HSIZE, 39, 65, 68, 112, "TOPLEFT", ChatFrame3, "TOPRIGHT", GAP, 0)
 	FCF_Close(ChatFrame5)
 	FCF_Close(ChatFrame7)
-	SetCVar("chatLocked", 1)
+
+	FCF_SetLocked(ChatFrame1, true)
+	FCF_SetLocked(ChatFrame3, true)
+	FCF_SetLocked(ChatFrame4, true)
+	FCF_SetLocked(ChatFrame6, true)
 
 
 	WorldFrame:ClearAllPoints()
