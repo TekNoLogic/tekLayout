@@ -68,10 +68,6 @@ f:SetScript("OnEvent", function()
 	local HSIZE = UIParent:GetWidth()/3-GAP
 
 
-	-- Hide those stupid dock thingies that show up on load for a moment
-	for i=1,7 do _G["ChatFrame"..i.."TabDockRegionHighlight"]:Hide() end
-
-
 	-- Force on raid coloring
 	for i,v in pairs(CHAT_CONFIG_CHAT_LEFT) do ToggleChatColorNamesByClassGroup(true, v.type) end
 
