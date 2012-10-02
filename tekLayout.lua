@@ -95,4 +95,7 @@ f:SetScript("OnEvent", function()
 	WorldFrame:SetPoint("TOPRIGHT", UIParent)
 	WorldFrame:SetPoint("LEFT", UIParent)
 	WorldFrame:SetPoint("BOTTOM", ChatFrame1, "TOP", 0, GAP/2)
+
+	PetBattleFrame:SetPoint("BOTTOMRIGHT", WorldFrame, "BOTTOMRIGHT", 0, 4)
+	PetBattleFrame:SetFrameStrata("HIGH")
 end)
