@@ -1,5 +1,7 @@
 
 local SCALE, VSIZE, GAP = .859999995470047, 150, 6 -- max scale: .87
+local LAPPY = UIParent:GetHeight() <= 900
+local FONTSIZE = LAPPY and 13 or 11
 
 
 local groups = {
@@ -32,8 +34,8 @@ local function SetupFrame(frame, h, w, r, g, b, a, ...)
 	FCF_SetWindowAlpha(frame, a/255)
 
 	local font, _, flags = frame:GetFont()
-	frame:SetFont(font, 11, flags)
-	SetChatWindowSize(id, 11)
+	frame:SetFont(font, FONTSIZE, flags)
+	SetChatWindowSize(id, FONTSIZE)
 
 --~ 	ChatFrame_RemoveAllChannels(frame)
 --~ 	frame.channelList = {}
