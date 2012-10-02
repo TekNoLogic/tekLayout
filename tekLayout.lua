@@ -61,6 +61,10 @@ f:SetScript("OnEvent", function()
 	f:SetScript("OnEvent", nil)
 
 
+	-- Make sure autoloot is on
+	SetCVar("autoLootDefault", 1)
+
+
 	-- Seems Wrath likes to undo scale from time to time
 	SetCVar("useUiScale", 1)
 	SetCVar("UISCALE", SCALE)
