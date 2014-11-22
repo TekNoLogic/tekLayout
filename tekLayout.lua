@@ -15,7 +15,8 @@ local groups = {
 	                "BG_HORDE", "BG_ALLIANCE", "BG_NEUTRAL", "BATTLEGROUND",
 	                "BATTLEGROUND_LEADER", "RAID_WARNING", "INSTANCE_CHAT",
 	                "INSTANCE_CHAT_LEADER"},
-	[ChatFrame6] = {"COMBAT_FACTION_CHANGE", "SKILL", "LOOT", "MONEY",
+	[ChatFrame6] = {"COMBAT_FACTION_CHANGE", "SKILL", "LOOT", "MONEY", "CURRENCY",
+	                "PET_INFO", "OPENING", "TRADESKILLS",
 	                "COMBAT_XP_GAIN", "COMBAT_HONOR_GAIN", "COMBAT_MISC_INFO"},
 }
 
