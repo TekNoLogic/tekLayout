@@ -109,4 +109,6 @@ f:SetScript("OnEvent", function()
 
 	PetBattleFrame:SetPoint("BOTTOMRIGHT", WorldFrame, "BOTTOMRIGHT", 0, 4)
 	PetBattleFrame:SetFrameStrata("HIGH")
+
+	AlertFrame:SetPoint("BOTTOM", 0, 28)
 end)
