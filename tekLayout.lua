@@ -16,7 +16,7 @@ local groups = {
 	                "BATTLEGROUND_LEADER", "RAID_WARNING", "INSTANCE_CHAT",
 	                "INSTANCE_CHAT_LEADER"},
 	[ChatFrame6] = {"COMBAT_FACTION_CHANGE", "SKILL", "LOOT", "MONEY", "CURRENCY",
-	                "PET_INFO", "OPENING", "TRADESKILLS",
+	                "PET_INFO", "OPENING",
 	                "COMBAT_XP_GAIN", "COMBAT_HONOR_GAIN", "COMBAT_MISC_INFO"},
 }
 
