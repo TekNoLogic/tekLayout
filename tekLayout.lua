@@ -26,7 +26,9 @@ local function SetupFrame(frame, h, w, r, g, b, a, ...)
 
 	if frame ~= ChatFrame1 then
 		SetChatWindowDocked(id, nil)
-		for i,v in pairs(DOCKED_CHAT_FRAMES) do if v == frame then table.remove(DOCKED_CHAT_FRAMES, i) end end
+		for i,v in pairs(DOCKED_CHAT_FRAMES) do
+			if v == frame then table.remove(DOCKED_CHAT_FRAMES, i) end
+		end
 		frame.isDocked = nil
 
 		frame.isLocked = nil
@@ -84,7 +86,9 @@ f:SetScript("OnEvent", function()
 
 
 	-- Force on raid coloring
-	for i,v in pairs(CHAT_CONFIG_CHAT_LEFT) do ToggleChatColorNamesByClassGroup(true, v.type) end
+	for i,v in pairs(CHAT_CONFIG_CHAT_LEFT) do
+		ToggleChatColorNamesByClassGroup(true, v.type)
+	end
 
 
 	SetupFrame(ChatFrame1, VSIZE, HSIZE, 51, 51, 51, 107, "BOTTOMLEFT", UIParent, GAP/2, GAP+3)
