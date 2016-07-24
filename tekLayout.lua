@@ -1,4 +1,7 @@
 
+local myname, ns = ...
+
+
 local SCALE, VSIZE, GAP = .859999995470047, 150, 6 -- max scale: .87
 local LAPPY = UIParent:GetHeight() <= 900
 local FONTSIZE = LAPPY and 13 or 11
@@ -67,13 +70,7 @@ end
 --~ 	ChatFrame_AddChannel(ChatFrame3, "Trade")
 --~ end)
 
-local f = CreateFrame("frame")
-f:RegisterEvent("PLAYER_LOGIN")
-f:SetScript("OnEvent", function()
-	f:UnregisterAllEvents()
-	f:SetScript("OnEvent", nil)
-
-
+function ns.OnLogin()
 	-- Make sure autoloot is on
 	SetCVar("autoLootDefault", 1)
 
@@ -115,4 +112,4 @@ f:SetScript("OnEvent", function()
 	PetBattleFrame:SetFrameStrata("HIGH")
 
 	AlertFrame:SetPoint("BOTTOM", 0, 28)
-end)
+end

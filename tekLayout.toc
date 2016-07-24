@@ -6,4 +6,6 @@
 ## X-Website: http://www.tekkub.net/
 ## X-Email: tekkub-wow@googlegroups.com
 
+externals/events.lua
+
 tekLayout.lua
