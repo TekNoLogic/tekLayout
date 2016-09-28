@@ -112,4 +112,6 @@ function ns.OnLogin()
 	PetBattleFrame:SetFrameStrata("HIGH")
 
 	AlertFrame:SetPoint("BOTTOM", 0, 28)
+
+	UIPARENT_ALTERNATE_FRAME_POSITIONS.PlayerPowerBarAlt_Bottom.yOffset = 0
 end
