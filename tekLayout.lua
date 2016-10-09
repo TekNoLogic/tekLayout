@@ -118,6 +118,11 @@ function ns.OnLogin()
 	ExtraActionBarFrame.button.style:Hide()
 	ExtraActionButton1HotKey:Hide()
 
+	local frame = CreateFrame("Frame", nil, ExtraActionButton1)
+	frame:SetScript("OnShow", function()
+		ActionButton_ShowOverlayGlow(ExtraActionButton1)
+	end)
+
 	UIPARENT_ALTERNATE_FRAME_POSITIONS.PlayerPowerBarAlt_Bottom.yOffset = 50
 
 	UIPARENT_MANAGED_FRAME_POSITIONS.ArcheologyDigsiteProgressBar.yOffset = 60
