@@ -103,10 +103,8 @@ function ns.OnLogin()
 
 
 	WorldFrame:ClearAllPoints()
-	WorldFrame:SetUserPlaced()
-	WorldFrame:SetPoint("TOPRIGHT", UIParent)
-	WorldFrame:SetPoint("LEFT", UIParent)
-	WorldFrame:SetPoint("BOTTOM", ChatFrame1, "TOP", 0, GAP/2)
+	WorldFrame:SetPoint("TOPLEFT")
+	WorldFrame:SetPoint("BOTTOMRIGHT", 0, 140)
 
 	PetBattleFrame:SetPoint("BOTTOMRIGHT", WorldFrame, "BOTTOMRIGHT", 0, 4)
 	PetBattleFrame:SetFrameStrata("HIGH")
