@@ -102,13 +102,11 @@ function ns.OnLogin()
 	FCF_SetLocked(ChatFrame6, true)
 
 
-	if not ns.is_7_1 then
-		WorldFrame:ClearAllPoints()
-		WorldFrame:SetPoint("TOPLEFT")
-		WorldFrame:SetPoint("BOTTOMRIGHT", 0, 140)
-		-- WorldFrame:SetPoint("BOTTOMRIGHT", UIParent, 0, VSIZE + GAP + 3 + GAP/2)
-		-- WorldFrame:SetPoint("BOTTOM", ChatFrame1, "TOP", 0, GAP/2)
-	end
+	WorldFrame:ClearAllPoints()
+	WorldFrame:SetPoint("TOPLEFT")
+	WorldFrame:SetPoint("BOTTOMRIGHT", 0, 140)
+	-- WorldFrame:SetPoint("BOTTOMRIGHT", UIParent, 0, VSIZE + GAP + 3 + GAP/2)
+	-- WorldFrame:SetPoint("BOTTOM", ChatFrame1, "TOP", 0, GAP/2)
 
 	PetBattleFrame:SetPoint("BOTTOMRIGHT", WorldFrame, "BOTTOMRIGHT", 0, 4)
 	PetBattleFrame:SetFrameStrata("HIGH")
