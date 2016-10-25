@@ -7,5 +7,6 @@
 ## X-Email: tekkub-wow@googlegroups.com
 
 externals/events.lua
+externals/ptr.lua
 
 tekLayout.lua
