@@ -70,7 +70,7 @@ end
 --~ 	ChatFrame_AddChannel(ChatFrame3, "Trade")
 --~ end)
 
-function ns.OnLogin()
+local function OnLogin()
 	-- Make sure autoloot is on
 	SetCVar("autoLootDefault", 1)
 
@@ -127,3 +127,6 @@ function ns.OnLogin()
 
 	UIPARENT_MANAGED_FRAME_POSITIONS.ArcheologyDigsiteProgressBar.yOffset = 60
 end
+
+
+ns.RegisterCallback(myname, "PLAYER_LOGIN", OnLogin)

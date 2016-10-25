@@ -1,12 +1,10 @@
-## Interface: 30000
+## Interface: 70100
 
 ## Title: tekLayout
 ## Notes: My personal WorldFrame/ChatFrame layout
 ## Author: Tekkub Stoutwrithe
-## X-Website: http://www.tekkub.net/
-## X-Email: tekkub-wow@googlegroups.com
 
-externals/events.lua
-externals/ptr.lua
+externals\events.lua
+externals\ptr.lua
 
 tekLayout.lua
