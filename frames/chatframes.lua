@@ -42,7 +42,7 @@ local function SetupFrame(frame, h, w, r, g, b, a, ...)
 
 	frame:ClearAllPoints()
 	frame:SetPoint(...)
-	frame:Setsize(w, h)
+	frame:SetSize(w, h)
 	frame:Show()
 
 	FCF_SetWindowColor(frame, r/255, g/255, b/255)
