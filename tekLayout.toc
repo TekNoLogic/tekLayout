@@ -5,7 +5,6 @@
 ## Author: Tekkub Stoutwrithe
 
 externals\events.lua
-externals\ptr.lua
 
 services\chatframes.lua
 
