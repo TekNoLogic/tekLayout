@@ -27,6 +27,11 @@ local NOOP = function() end
 local callbacks = {}
 local frame = CreateFrame("Frame")
 function ns.RegisterCallback(context, message, func)
+	-- Allow context-less calls like ns.RegisterCallback("PLAYER_LOGIN", OnLogin)
+	if type(context) == "string" and type(message) == "function" then
+		context, message, func = message, context, message
+	end
+
 	assert(context, "`context` must not be nil")
 	assert(message, "`message` must not be nil")
 	if not callbacks[message] then callbacks[message] = {} end
