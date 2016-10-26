@@ -6,6 +6,7 @@
 
 externals\events.lua
 
+services\cvars.lua
 services\chatframes.lua
 
 tekLayout.lua
