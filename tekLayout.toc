@@ -7,6 +7,11 @@
 externals\events.lua
 
 services\cvars.lua
-services\chatframes.lua
 
-tekLayout.lua
+frames\alert_frame.lua
+frames\archeology_digsite_progress_bar.lua
+frames\chatframes.lua
+frames\extra_action_button.lua
+frames\pet_battle_frame.lua
+frames\player_power_bar_alt.lua
+frames\worldframe.lua
