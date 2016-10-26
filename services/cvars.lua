@@ -16,4 +16,4 @@ local function OnLogin()
 end
 
 
-ns.RegisterCallback("PLAYER_LOGIN", OnLogin)
+ns.RegisterCallback("_THIS_ADDON_LOADED", OnLogin)
